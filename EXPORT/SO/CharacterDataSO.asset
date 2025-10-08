@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1b4840d0aeea74d9128d481188328e, type: 3}
+  m_Name: CharacterDataSO
+  m_EditorClassIdentifier: 
+  author: Shifty
+  RandomizeUID: 0
+  uID: 1133691723
+  assetBundleName: MyTestCharacter
+  characterName: Test Character
+  characterDescription: My Test Description
+  colliderHeight: 3.85
+  colliderWidth: 0.7
+  coolness: 7
+  difficulty: 1
+  audioFootsteps: []
+  themeSong: {fileID: 0}
+  icon: {fileID: 2800000, guid: 965f955deb977254da724be266be9236, type: 3}
+  prefab: {fileID: 2355622090715804222, guid: dc8c07b0e699ce7448806314f2fdb338, type: 3}
+  weapon: {fileID: 11400000, guid: 64b094f8b004b66458c7c03c48bf0210, type: 2}
+  passive: {fileID: 11400000, guid: b79cfa35873ca044187d8a749ca6f801, type: 2}
+  skins:
+  - {fileID: 11400000, guid: db1d24991a3a8c6449e0f9be2de852b4, type: 2}
+  statModifiers:
+  - stat: 26
+    modifyType: 2
+    modification: 1
+  - stat: 5
+    modifyType: 2
+    modification: 0.05
+  - stat: 29
+    modifyType: 2
+    modification: 45
+  - stat: 25
+    modifyType: 0
+    modification: 0.02
+  categoryRatios:
+  - Category: 0
+    Value: 0
+  - Category: 1
+    Value: 0.2765
+  - Category: 2
+    Value: 0.3056
+  - Category: 3
+    Value: 1
+  - Category: 4
+    Value: 0
+  - Category: 5
+    Value: 0.625
+  - Category: 6
+    Value: 1

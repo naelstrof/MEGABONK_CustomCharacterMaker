@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de554624391dbae46aef3c67d8ffe127, type: 3}
+  m_Name: CustomWeaponSO
+  m_EditorClassIdentifier: 
+  weaponName: The CUBE
+  weaponDescription: This is actually just a test weapon
+  icon: {fileID: 2800000, guid: 51e7e88b26f57b14e9961b4944fa9cb8, type: 3}
+  WeaponAttackPrefab: {fileID: 2152390104103710203, guid: 3e4333b2805a2e64882d8c04da3218de, type: 3}
+  UpgradeOptions:
+  - stat: 12
+    modifyType: 2
+    modification: 2.5
+  - stat: 11
+    modifyType: 0
+    modification: 0.2
+  - stat: 16
+    modifyType: 2
+    modification: 1
+  - stat: 9
+    modifyType: 0
+    modification: 0.16
+  AttackSpeed: 1
+  BaseDamage: 10
+  KnockbackMuliplier: 1
+  SizeMultiplier: 1
+  ProjectileBounces: 0
+  Projectiles: 1
+  DurationMultiplier: 1
+  ProjectileSpeedMultiplier: 1
+  CritChance: 0
+  AdditionalCritDamage: 0
+  additionalStats: []
