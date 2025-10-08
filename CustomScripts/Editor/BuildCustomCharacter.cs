@@ -96,7 +96,7 @@ public class CreateAssetBundles
             assetBundles.Add(build);
             
             //create json file with variables and references to assets
-            var filePath = Path.Combine(outputPath, assetBundleName.ToLower() + ".json");
+            var filePath = Path.Combine(outputPath, assetBundleName.ToLower() + "custom.json");
             using (var fs = File.Create(filePath))
                 using (var writer = new StreamWriter(fs))
                     writer.Write(customCharacterJSON.ToString());
