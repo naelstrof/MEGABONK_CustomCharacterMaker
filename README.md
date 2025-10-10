@@ -16,7 +16,8 @@ If you have followed these instructions, you should now have a Unity project wit
 I would **HIGHLY** recommend immediately building your character (Section found below) to ensure that everything was setup correctly, and that you can see the character in Megabonk.
 
 ## Creating a Character
-Everything you need to help create a character can be found in the EXPORT folder. 
+Everything you need to help create a character can be found in the EXPORT folder for use as reference. 
+PLEASE NOTE: The example characters are NOT BALANCED and are mainly a sanity check to make sure you can properly add a character to the game.
 The SourceCode and CustomScripts folders only contain code to help facilitate the creation of custom characters, and SHOULD NOT BE MODIFIED.
 
 Here is a step by step guide on the required steps of creating a character.
@@ -25,6 +26,7 @@ Here is a step by step guide on the required steps of creating a character.
 3. For all imported models (assuming .fbx file) under import otions, Model - Set Read/Write to true, Materials - Extract Materials to ensure the materials can be stored in the assetbundle.
 4. Animations.
 	- Create an animator by copying the customCharacter Animator Controller, then replace the animations with your own.
+		- The current animation controller is just an estimation of how animations actually work, and make show the incorrect animation at some points. If anyone finds a more reasonable looking animation graph, please let me know.
 	- Make sure all your animations besides jump are set to 'Loop Time' (and likely loop pose too)
 5. Scriptable Objects (SO folder)
 	- Each custom character is defined by the CharacterDataSO object, and needs its own copy

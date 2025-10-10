@@ -49,7 +49,7 @@ public class CustomWeaponSO : ScriptableObject
     public float ProjectileSpeedMultiplier = 1f;
     [Tooltip("Base Crit Chance (1= 100%)")]
     public float CritChance = 0; 
-    [Tooltip("Additional Crit Damage (0 is the default 200% damage on crit, 1 is 300% damage on crit)")]
+    [Tooltip("Additional Crit Damage (0 is the default 200% damage on crit, 1 is 400% damage on crit, 2 is 600% damage on crit, etc...)")]
     public float AdditionalCritDamage = 0; //CritDamage
     
     [Header("Additional Base Stat Modifications")]

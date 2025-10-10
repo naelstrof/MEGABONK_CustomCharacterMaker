@@ -21,16 +21,16 @@ MonoBehaviour:
   UpgradeOptions:
   - stat: 12
     modifyType: 2
-    modification: 2.5
-  - stat: 11
+    modification: 5
+  - stat: 17
     modifyType: 0
-    modification: 0.2
+    modification: 0.1
   - stat: 16
     modifyType: 2
     modification: 1
-  - stat: 9
+  - stat: 19
     modifyType: 0
-    modification: 0.16
+    modification: 0.1
   AttackSpeed: 1
   BaseDamage: 10
   KnockbackMultiplier: 1
@@ -39,6 +39,6 @@ MonoBehaviour:
   Projectiles: 1
   DurationMultiplier: 1
   ProjectileSpeedMultiplier: 1
-  CritChance: 0
-  AdditionalCritDamage: 0
+  CritChance: 0.5
+  AdditionalCritDamage: 1
   additionalStats: []
