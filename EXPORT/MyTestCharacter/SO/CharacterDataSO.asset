@@ -44,17 +44,17 @@ MonoBehaviour:
     modifyType: 0
     modification: 0.02
   categoryRatios:
-  - Category: 0
-    Value: 0
-  - Category: 1
-    Value: 0.2765
-  - Category: 2
-    Value: 0.3056
-  - Category: 3
-    Value: 1
-  - Category: 4
-    Value: 0
-  - Category: 5
-    Value: 0.625
-  - Category: 6
-    Value: 1
+  - category: 0
+    value: 0
+  - category: 1
+    value: 0.2765
+  - category: 2
+    value: 0.3056
+  - category: 3
+    value: 1
+  - category: 4
+    value: 0
+  - category: 5
+    value: 0.625
+  - category: 6
+    value: 1

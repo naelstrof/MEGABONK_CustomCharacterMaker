@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 
 public class CreateAssetBundles
 {
-    public static readonly string VERSION = "1.0";
+    public static readonly string VERSION = "1.0.1";
     
     
     [MenuItem("Build/Build Custom Character")]

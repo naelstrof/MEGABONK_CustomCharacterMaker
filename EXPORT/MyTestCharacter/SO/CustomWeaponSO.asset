@@ -31,7 +31,7 @@ MonoBehaviour:
     modification: 0.16
   AttackSpeed: 1
   BaseDamage: 10
-  KnockbackMuliplier: 1
+  KnockbackMultiplier: 1
   SizeMultiplier: 1
   ProjectileBounces: 0
   Projectiles: 1

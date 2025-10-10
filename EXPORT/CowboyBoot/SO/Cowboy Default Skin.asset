@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ed35ebe8971114ca57217dac006cc6, type: 3}
+  m_Name: Cowboy Default Skin
+  m_EditorClassIdentifier: 
+  skinName: Default
+  description: The default skin
+  icon: {fileID: 2800000, guid: eea08044a93cdb740965d17e3626f0f3, type: 3}
+  materials:
+  - {fileID: 2100000, guid: a9eb3e19bec36584fa6c30b3d732311f, type: 2}
+  skinType: 0

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de554624391dbae46aef3c67d8ffe127, type: 3}
+  m_Name: BigBoot Weapon
+  m_EditorClassIdentifier: 
+  weaponName: Big Boot
+  weaponDescription: Stomping the ground creates shockwaves that damage enemies.
+    The longer the airtime, the stronger the blast (not actually stronger yet, still
+    work in progress)
+  icon: {fileID: 2800000, guid: 565e5547017047a4d95c8116cdeb9e9b, type: 3}
+  WeaponAttackPrefab: {fileID: 1474659555564027810, guid: 20b0eb9e772dfc34f9cf2820c1c1b82f, type: 3}
+  UpgradeOptions:
+  - stat: 12
+    modifyType: 2
+    modification: 2.5
+  - stat: 11
+    modifyType: 0
+    modification: 0.2
+  - stat: 16
+    modifyType: 2
+    modification: 1
+  - stat: 9
+    modifyType: 0
+    modification: 0.16
+  AttackSpeed: 1
+  BaseDamage: 10
+  KnockbackMultiplier: 1
+  SizeMultiplier: 1
+  ProjectileBounces: 0
+  Projectiles: 1
+  DurationMultiplier: 1
+  ProjectileSpeedMultiplier: 1
+  CritChance: 0
+  AdditionalCritDamage: 0
+  additionalStats: []

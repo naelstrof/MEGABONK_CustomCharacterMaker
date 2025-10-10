@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1b4840d0aeea74d9128d481188328e, type: 3}
+  m_Name: Cowboy
+  m_EditorClassIdentifier: 
+  author: Shifty
+  RandomizeUID: 0
+  uID: 431603034
+  assetBundleName: CowboyBoot
+  characterName: Two-Toe Terry
+  characterDescription: This outlaw has big shoes to fill, and they ain't big enough
+    for the two of us.
+  colliderHeight: 3.85
+  colliderWidth: 0.7
+  coolness: 10
+  difficulty: 10
+  audioFootsteps: []
+  themeSong: {fileID: 0}
+  icon: {fileID: 2800000, guid: eea08044a93cdb740965d17e3626f0f3, type: 3}
+  prefab: {fileID: 1388434766284798236, guid: 5bf2eabd0fe19de409e4437359349114, type: 3}
+  weapon: {fileID: 11400000, guid: d6052ed0a94f9f6468ba9a05559af9e7, type: 2}
+  passive: {fileID: 11400000, guid: 8a6ba4715ea369d4cbccdd3a9a2debf5, type: 2}
+  skins:
+  - {fileID: 11400000, guid: 9e2dc113eba40d34a89d992b76dec206, type: 2}
+  statModifiers:
+  - stat: 26
+    modifyType: 2
+    modification: 2
+  - stat: 5
+    modifyType: 2
+    modification: 0.1
+  - stat: 29
+    modifyType: 2
+    modification: 60
+  - stat: 25
+    modifyType: 0
+    modification: 0.04
+  - stat: 0
+    modifyType: 0
+    modification: 1
+  categoryRatios:
+  - category: 0
+    value: 1
+  - category: 1
+    value: 0.2
+  - category: 2
+    value: 0.5
+  - category: 3
+    value: 0.2
+  - category: 4
+    value: 0.5
+  - category: 5
+    value: 0.6
+  - category: 6
+    value: 1
