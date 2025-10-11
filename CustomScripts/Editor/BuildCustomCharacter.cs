@@ -10,25 +10,46 @@ using Newtonsoft.Json.Linq;
 public class CreateAssetBundles
 {
     public static readonly string VERSION = "1.0.1";
+    public static readonly string CUSTOM_CHARACTER_KEY = "character";
+    public static readonly string CUSTOM_SOLO_SKIN_KEY = "soloSkin";
+    public static readonly string CUSTOM_SOLO_WEAPON_KEY = "soloWeapon";
     
     
-    [MenuItem("Build/Build Custom Character")]
+    [MenuItem("Build/Build Custom Assets")]
     static void BuildAllAssetBundles()
     {
         string assetBundleDirectory = "Assets/AssetBundles";
+        string characterABDirectory = Path.Combine(assetBundleDirectory, "Characters");
+        string skinABDirectory = Path.Combine(assetBundleDirectory, "Skins");
         if (!Directory.Exists(assetBundleDirectory))
-        {
             Directory.CreateDirectory(assetBundleDirectory);
-        }
-        var assetBundles = GenerateAssetBundleBuildsForCustomCharacters(assetBundleDirectory);
+        if (!Directory.Exists(characterABDirectory))
+            Directory.CreateDirectory(characterABDirectory);
+        if (!Directory.Exists(skinABDirectory))
+            Directory.CreateDirectory(skinABDirectory);
         
+        
+        //Create Custom Characters
+        var characterAssetBundles = GenerateAssetBundleBuildsForCustomCharacters(characterABDirectory);
+        BuildAssetBundles(characterABDirectory, characterAssetBundles);
+
+        //Create Custom Skins
+        var skinAssetBundles = GenerateAssetBundleBuildsForSkins(skinABDirectory);
+        BuildAssetBundles(skinABDirectory, skinAssetBundles);
+
+    }
+
+    
+
+    private static void BuildAssetBundles(string assetBundleDirectory, List<AssetBundleBuild> assetBundles)
+    {
+        Debug.Log($"Building asset bundles {assetBundles.Count}");
         BuildAssetBundlesParameters buildInput = new()
         {
             outputPath = assetBundleDirectory,
             options = BuildAssetBundleOptions.None,
             bundleDefinitions = assetBundles.ToArray()
         };
-        
         AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(buildInput);
         
         // Look at the results
@@ -45,11 +66,39 @@ public class CreateAssetBundles
         {
             Debug.Log("Build failed, see Console and Editor log for details");
         }
-        
+    }
+    
+    private static List<AssetBundleBuild> GenerateAssetBundleBuildsForSkins(string outputPath)
+    {
+        List<AssetBundleBuild> assetBundles = new List<AssetBundleBuild>();
 
-        // BuildPipeline.BuildAssetBundles(assetBundleDirectory, 
-        //    BuildAssetBundleOptions.None, 
-        //    EditorUserBuildSettings.activeBuildTarget);
+        var customSkins = AssetDatabase.FindAssets("t:CustomSoloSkinSO");
+        Debug.Log($"Custom Solo skins found: {customSkins.Length}");
+        foreach (var asset in customSkins)
+        {
+            var path = AssetDatabase.GUIDToAssetPath(asset);
+            var skin = AssetDatabase.LoadAssetAtPath<CustomSoloSkinSO>(path);
+            var assetBundleName = skin.assetBundleName;
+            Debug.Log($"Building Custom Skin: {skin.skinName}, assetBundleName: {assetBundleName}");
+            AssetBundleBuild build = new();
+            HashSet<string> assetPathList = new HashSet<string>();
+            build.assetBundleName = assetBundleName;
+
+            JObject customSkinJSON = new JObject();
+            customSkinJSON.Add("version",VERSION);
+            
+            customSkinJSON.Add(CUSTOM_SOLO_SKIN_KEY, skin.toJSON());
+            assetPathList.UnionWith(skin.getAssetNameList());
+
+            build.assetNames = assetPathList.ToArray();
+            assetBundles.Add(build);
+            
+            var filePath = Path.Combine(outputPath, assetBundleName.ToLower() + ".custom.json");
+            using (var fs = File.Create(filePath))
+            using (var writer = new StreamWriter(fs))
+                writer.Write(customSkinJSON.ToString());
+        }
+        return assetBundles;
     }
 
     static List<AssetBundleBuild> GenerateAssetBundleBuildsForCustomCharacters(string outputPath)
@@ -73,7 +122,7 @@ public class CreateAssetBundles
             
             JObject customCharacterJSON = new JObject();
             customCharacterJSON.Add("version",VERSION);
-            customCharacterJSON.Add("character", character.toJSON());
+            customCharacterJSON.Add(CUSTOM_CHARACTER_KEY, character.toJSON());
             assetPathList.UnionWith(character.getAssetNameList());
             customCharacterJSON.Add("passive", passive.toJSON());
             assetPathList.UnionWith(passive.getAssetNameList());

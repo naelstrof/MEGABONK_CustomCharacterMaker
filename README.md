@@ -13,7 +13,9 @@ They are used in conjunction with my Megabonk Custom Character Loader plugin (ht
 	the package name is: 'com.unity.nuget.newtonsoft-json', and version doesn't matter
 	
 If you have followed these instructions, you should now have a Unity project with no Errors. You can ignore the 999+ warnings.
-I would **HIGHLY** recommend immediately building your character (Section found below) to ensure that everything was setup correctly, and that you can see the character in Megabonk.
+I would **HIGHLY** recommend immediately building your assets with the existing example assets (Section found below) to ensure that everything was set up correctly, and that you can see the character/skins in Megabonk.
+
+
 
 ## Creating a Character
 Everything you need to help create a character can be found in the EXPORT folder for use as reference. 
@@ -50,13 +52,14 @@ Here is a step by step guide on the required steps of creating a character.
 
 
 
-## Building Your Character
-- Once you are happy with your custom character, you can build your character by finding the Build option (Build > Build Custom Character) on the menu bar at the top.
-- After a few seconds of compilation, you should see a new 'AssetBundles' folder created withj your bundled character files inside.
-- The files will be named after your CharacterDataSO object's 'Asset Bundle Name' field in all lowercase, of which you should see 3. One with no extension, once with a .json extension, and one with .manifest. (There will also be files named 'AssetBundles' but you can ignore those)
+
+## Building Your Assets
+- Once you are happy with your custom assets, you can build them by finding the Build option (Build > Build Custom Assets) on the menu bar at the top.
+- After a few seconds of compilation, you should see a new 'AssetBundles' folder created with your bundled character files inside.
+- The files will be named after your CharacterDataSO object's 'Asset Bundle Name' field in all lowercase, of which you should see 3. One with no extension, once with a .custom.json extension, and one with .manifest. (There will also be files named after the folder you are in, but you can ignore those)
 - ~~Copy the one with no extension and .json extension into your BepInEx/plugins/CustomCharacters folder. if the CustomCharacters folder does not exist, create it.~~ (This still works but the *.custom.json method below is recommended)
 	- as of version 1.0.1+ you just make sure the json file ends with the extension '.custom.json' and it can be found anywhere in the plugin folder.
-- When you start the game, you should see your character loaded as an option in the character select.
+- When you start the game, you should see your character loaded as an option in the character select, and a new custom skin for Fox.
 
 
 
