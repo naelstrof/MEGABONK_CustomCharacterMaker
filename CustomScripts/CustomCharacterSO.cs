@@ -86,27 +86,33 @@ public class CustomCharacterSO : ScriptableObject
         //var characterPath = AssetDatabase.GetAssetPath(this);
         var iconPath = AssetDatabase.GetAssetPath(icon);
         var prefabPath = AssetDatabase.GetAssetPath(prefab);
-        
-        var skinPaths = new List<string>();
-        foreach (var skin in skins)
+        var themesongPath = AssetDatabase.GetAssetPath(themeSong);
+
+        var audioFootstepsPaths = new List<string>();
+        foreach (var footstep in audioFootsteps)
         {
-            skinPaths.Add(AssetDatabase.GetAssetPath(skin));
+            audioFootstepsPaths.Add(AssetDatabase.GetAssetPath(footstep));
         }
+        
+        // var skinPaths = new List<string>();
+        // foreach (var skin in skins)
+        // {
+        //     skinPaths.Add(AssetDatabase.GetAssetPath(skin));
+        // }
         
         return JObject.FromObject(new { 
             //characterPath,
             author, 
             eCharacter = uID,
             assetBundleName,
-
             characterName,
             characterDescription,
             colliderHeight,
             colliderWidth,
             coolness,
             difficulty,
-            audioFootsteps,
-            themeSong,
+            themesongPath,
+            audioFootstepsPaths,
             prefabPath,
             iconPath,
             statModifiers,
@@ -120,6 +126,12 @@ public class CustomCharacterSO : ScriptableObject
         list.Add(AssetDatabase.GetAssetPath(this));
         list.Add(AssetDatabase.GetAssetPath(prefab));
         list.Add(AssetDatabase.GetAssetPath(icon));
+        list.Add(AssetDatabase.GetAssetPath(themeSong));
+        
+        foreach (var footstep in audioFootsteps)
+        {
+            list.Add(AssetDatabase.GetAssetPath(footstep));
+        }
         
         return list.ToArray();
     }
