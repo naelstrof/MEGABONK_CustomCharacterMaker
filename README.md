@@ -38,7 +38,7 @@ Here is a step by step guide on the required steps of creating a character.
 
 
 ### Features
-- Custom armatures. Any armature should work for the player model, as long as the root object has the Animator component.
+- Custom Armatures. Any armature should work for the player model, as long as the root object has the Animator component.
 - Custom Weapons. Weapons are defined by the 'Custom Weapon SO' scriptable object + 'Weapon Attack' script + 'Projectile X' script (like Projectile Explode or Projectile Mines).
 	- 'Custom Weapon SO' defines the base stats and upgrade options for the weapon. In other words, all the math.
 		- Upgrade Options determine what options can appear when you upgrade a weapon. If flat damage is all that ocurred, you would only see weapon damage upgrades when leveling.
@@ -49,6 +49,10 @@ Here is a step by step guide on the required steps of creating a character.
 		- Hit is the effect when the attack hits an opponent.
 	- The Stats section defines all required stats, though additional base stats can also be added below
 - Custom Passives. Not really. Currently only works with the predefined passives under different names.
+- Custom Shaders. 
+  - You can use the 'original' MegabonkShader, which will shade your character in the Megabonk Style in-game without throwing errors.
+    - The shader will not look correct in the Unity Editor, but should do so in-game.
+  - Alternatively, you can use your own custom shader + Material (like the 'Standard' material), and it will show up in that rendering style in game.
 
 
 
