@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7042873437201763743, guid: 819d72c33a5903a48a7c59d5b9d1e870, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c78a4dccd7d1708418174aa07173f6f3, type: 2}
     - target: {fileID: 919132149155446097, guid: 819d72c33a5903a48a7c59d5b9d1e870, type: 3}
       propertyPath: m_Name
       value: Cowboy-boot

@@ -45,6 +45,7 @@ public class CustomSoloSkinSO : ScriptableObject
         return JObject.FromObject(new
         {
             //skinPath,
+            author,
             skinName,
             description, 
             eCharacter,
