@@ -49,8 +49,9 @@ Here is a step by step guide on the required steps of creating a character.
 		- Hit is the effect when the attack hits an opponent.
 	- The Stats section defines all required stats, though additional base stats can also be added below
 - Custom Passives. Not really. Currently only works with the predefined passives under different names.
-- Custom Shaders. 
-  - You can use the 'original' MegabonkShader, which will shade your character in the Megabonk Style in-game without throwing errors.
+- Custom Shaders/Materials. 
+  - You can use the original MegabonkShader on your Materials, which will shade your character in the Megabonk Style in-game without throwing errors.
+    - Make sure to place your texture on the _MainTex field at the bottom of the material property list
     - The shader will not look correct in the Unity Editor, but should do so in-game.
   - Alternatively, you can use your own custom shader + Material (like the 'Standard' material), and it will show up in that rendering style in game.
 
