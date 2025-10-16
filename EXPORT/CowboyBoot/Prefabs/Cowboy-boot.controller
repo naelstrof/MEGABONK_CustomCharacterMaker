@@ -57,10 +57,10 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 700, y: 90, z: 0}
-  m_EntryPosition: {x: -60, y: 100, z: 0}
+  m_EntryPosition: {x: -50, y: 300, z: 0}
   m_ExitPosition: {x: 960, y: 360, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 6922594543849836477}
+  m_DefaultState: {fileID: -3733258863557547095}
 --- !u!1102 &-8642817836192958561
 AnimatorState:
   serializedVersion: 6
@@ -314,12 +314,6 @@ AnimatorController:
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: moving
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: idle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
